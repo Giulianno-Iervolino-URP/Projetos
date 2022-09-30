@@ -13,6 +13,10 @@ CREATE OR REPLACE PACKAGE EVS.PCK_EVS IS
     * |--------------+------------------+-----------------+-----------------------------------------------------------------------------------------------------------------     *
     ************************************************************************************************************************************************************************/
     --------
+    PROCEDURE PR_RETONA_CADASTRO_JSON_API(IN_JSON IN CLOB, OUT_JSON OUT CLOB);
+
+    --------
+    --------
     PROCEDURE PR_CADASTRA_USUARIO(IN_NM_USUARIO      IN VARCHAR
                                  ,IN_DS_HASH_SENHA   IN VARCHAR
                                  ,IN_DS_EMAIL        IN VARCHAR
@@ -126,6 +130,11 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
     NO_RESPONSE_FOUND EXCEPTION;
     PRAGMA EXCEPTION_INIT(NO_RESPONSE_FOUND, -20021);*/
     ---
+    PROCEDURE PR_RECEBE_JSON_API(IN_JSON IN CLOB) AS
+    BEGIN
+        NULL;
+    END PR_RECEBE_JSON_API;
+
     ---
     PROCEDURE PR_CADASTRA_USUARIO(IN_NM_USUARIO      IN VARCHAR
                                  ,IN_DS_HASH_SENHA   IN VARCHAR
@@ -166,7 +175,7 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
                                        ,IN_NM_USR_CADASTRO  IN VARCHAR) AS
     BEGIN
         NULL;
-    END;
+    END PR_CADASTRA_ESPECIALIDADE;
 
     -------                                    
     PROCEDURE PR_CADASTRA_PROCEDIMENTO(IN_CD_PROCEDIMENTO IN NUMBER DEFAULT NULL
@@ -176,7 +185,7 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
                                       ,IN_NM_USR_CADASTRO IN VARCHAR) AS
     BEGIN
         NULL;
-    END;
+    END PR_CADASTRA_PROCEDIMENTO;
 
     --------                       
     PROCEDURE PR_CADASTRA_PERIODO(IN_DT_MES_ANO_REF  IN DATE
@@ -186,7 +195,7 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
                                  ,IN_NM_USR_CADASTRO IN VARCHAR) AS
     BEGIN
         NULL;
-    END;
+    END PR_CADASTRA_PERIODO;
 
     --------                       
     PROCEDURE PR_CADASTRA_FAIXA(IN_VL_FAIXA_INI    IN DATE
@@ -195,7 +204,7 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
                                ,IN_NM_USR_CADASTRO IN VARCHAR) AS
     BEGIN
         NULL;
-    END;
+    END PR_CADASTRA_FAIXA;
 
     --------
     PROCEDURE PR_CADASTRA_AVALIADO(IN_NM_USUARIO       IN VARCHAR
@@ -205,7 +214,7 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
                                   ,IN_NM_USR_CADASTRO  IN VARCHAR) AS
     BEGIN
         NULL;
-    END;
+    END PR_CADASTRA_AVALIADO;
 
     --------       
     PROCEDURE PR_CADASTRA_DOMINIO(IN_NM_DOMINIO      IN VARCHAR
@@ -213,7 +222,7 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
                                  ,IN_NM_USR_CADASTRO IN VARCHAR) AS
     BEGIN
         NULL;
-    END;
+    END PR_CADASTRA_DOMINIO;
 
     --------  
     PROCEDURE PR_CADASTRA_DIMENSAO(IN_NM_DIMENSAO     IN VARCHAR
@@ -221,7 +230,7 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
                                   ,IN_NM_USR_CADASTRO IN VARCHAR) AS
     BEGIN
         NULL;
-    END;
+    END PR_CADASTRA_DIMENSAO;
 
     --------  
     PROCEDURE PR_CADASTRA_INDICADOR(IN_NM_INDICADOR    IN VARCHAR
@@ -230,7 +239,7 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
                                    ,IN_NM_USR_CADASTRO IN VARCHAR) AS
     BEGIN
         NULL;
-    END;
+    END PR_CADASTRA_INDICADOR;
 
     --------  
     PROCEDURE PR_CADASTRA_RESTRICAO(IN_DS_RESTRICAO    IN VARCHAR
@@ -238,31 +247,31 @@ CREATE OR REPLACE PACKAGE BODY EVS.PCK_EVS IS
                                    ,IN_NM_USR_CADASTRO IN VARCHAR) AS
     BEGIN
         NULL;
-    END;
+    END PR_CADASTRA_RESTRICAO;
 
     --------   
     PROCEDURE PR_CALCULA_EVS_AVAL_MES(IN_NR_SEQ_PERIODO IN NUMBER) AS
     BEGIN
         NULL;
-    END;
+    END PR_CALCULA_EVS_AVAL_MES;
 
     --------              
     PROCEDURE PR_CALCULA_EVS_AVAL_ANO(IN_NR_SEQ_PERIODO IN NUMBER) AS
     BEGIN
         NULL;
-    END;
+    END PR_CALCULA_EVS_AVAL_ANO;
 
     --------              
     PROCEDURE PR_CALCULA_EVS_ESP_MES(IN_NR_SEQ_PERIODO IN NUMBER) AS
     BEGIN
         NULL;
-    END;
+    END PR_CALCULA_EVS_ESP_MES;
 
     --------              
     PROCEDURE PR_CALCULA_EVS_ESP_ANO(IN_NR_SEQ_PERIODO IN NUMBER) AS
     BEGIN
         NULL;
-    END;
+    END PR_CALCULA_EVS_ESP_ANO;
 
     --------              
     ----
